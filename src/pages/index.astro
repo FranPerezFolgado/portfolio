@@ -1,0 +1,62 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import Badge from "../components/Badge.astro";
+import SocialMedia from "../components/SocialMedia.astro";
+import LinkedInIcon from "../icons/LinkedIn.astro";
+import GithubIcon from "../icons/Github.astro";
+import TwitterIcon from "../icons/Twitter.astro";
+import MailIcon from "../icons/Mail.astro";
+import Experience from "../components/Experience.astro";
+---
+
+<Layout
+	title="Portfolio de Fran Pérez. Desarrollador y Programador Web Backend."
+	description="Contrata a Fran Pérez, desarrollador backend con 5 años de experiencia en Java y Spring Boot. Especializado en crear soluciones eficientes y escalables para proyectos diversos, estoy listo para contribuir al éxito de tu equipo."
+>
+	<main class="text-white">
+		<section class="w-full lg:w-[740px] mx-auto py-44">
+			<h1
+				class="text-white text-5xl font-bold flex flex-row gap-x-2 pb-7"
+			>
+				Hey, I'm Fran Pérez
+				<a
+					href="https://linkedin.com/in/franperezfolgado"
+					target="_blank"
+					rel="noopener"
+					class="flex justify-center items-center"
+				>
+					<Badge>Open to work</Badge>
+				</a>
+			</h1>
+			<h2 class="text-2xl text-wrap">
+				<span class="text-yellow-100/80"
+					>More than 5 years of experience.</span
+				>
+				<span class="opacity-80">
+					Backend Developer with Java and Spring Boot. Currently
+					learning Frontend.
+				</span>
+				<span class="text-red-100/90">From Valencia, Spain.</span>
+			</h2>
+			<nav class="flex gap-x-2 mt-4">
+				<SocialMedia href="https://linkedin.com/in/franperezfolgado">
+					<LinkedInIcon class="size-6" />
+					LinkedIn
+				</SocialMedia>
+				<SocialMedia href="https://github.com/FranPerezFolgado">
+					<GithubIcon class="size-6" />
+					Github
+				</SocialMedia>
+				<SocialMedia href="https://twitter.com/fp__code">
+					<TwitterIcon class="size-6" />
+					Twitter
+				</SocialMedia>
+				<SocialMedia href="https://twitter.com/fp__code">
+					<MailIcon class="size-6" />
+					franperezfolgado@outlook.com
+				</SocialMedia>
+			</nav>
+		</section>
+	</main>
+</Layout>
