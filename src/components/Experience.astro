@@ -1,0 +1,31 @@
+---
+import ExperiencePill from "./ExperiencePill.astro";
+
+const EXPERIENCE = [
+    {
+        title: "Sngular",
+        job: "Backend Developer",
+        date: "February 2022 - Present",
+        description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent magna nunc, convallis vitae tempor sit amet, ullamcorper efficitur lorem. In orci sapien, facilisis ut vestibulum eget, lacinia eget orci. Maecenas nisl arcu, posuere auctor ante id, pretium mollis elit. Mauris ultrices nec purus at scelerisque. Sed in venenatis urna. Integer efficitur, nulla sed dignissim venenatis, mauris leo commodo dui, ut volutpat risus quam ac turpis. Vivamus auctor finibus elit, vitae vestibulum eros mattis ut. Maecenas sodales egestas odio, non sagittis ante molestie sit amet. Mauris mattis convallis nibh, et pellentesque dui tempor at. Phasellus vel turpis eros.",
+    },
+    {
+        title: "NTT Data",
+        job: "Spring Batch Developer",
+        date: "September 2020 - February 2022",
+        description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent magna nunc, convallis vitae tempor sit amet, ullamcorper efficitur lorem. In orci sapien, facilisis ut vestibulum eget, lacinia eget orci. Maecenas nisl arcu, posuere auctor ante id, pretium mollis elit. Mauris ultrices nec purus at scelerisque. Sed in venenatis urna. Integer efficitur, nulla sed dignissim venenatis, mauris leo commodo dui, ut volutpat risus quam ac turpis. Vivamus auctor finibus elit, vitae vestibulum eros mattis ut. Maecenas sodales egestas odio, non sagittis ante molestie sit amet. Mauris mattis convallis nibh, et pellentesque dui tempor at. Phasellus vel turpis eros.",
+    },
+    {
+        title: "IST Medical",
+        job: "Junior Backend Developer",
+        date: "July 2018 - September 2020",
+        description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent magna nunc, convallis vitae tempor sit amet, ullamcorper efficitur lorem. In orci sapien, facilisis ut vestibulum eget, lacinia eget orci. Maecenas nisl arcu, posuere auctor ante id, pretium mollis elit. Mauris ultrices nec purus at scelerisque. Sed in venenatis urna. Integer efficitur, nulla sed dignissim venenatis, mauris leo commodo dui, ut volutpat risus quam ac turpis. Vivamus auctor finibus elit, vitae vestibulum eros mattis ut. Maecenas sodales egestas odio, non sagittis ante molestie sit amet. Mauris mattis convallis nibh, et pellentesque dui tempor at. Phasellus vel turpis eros.",
+    },
+];
+---
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700 ml-4">
+    {EXPERIENCE.map((experience) => <ExperiencePill {...experience} />)}
+</ol>
