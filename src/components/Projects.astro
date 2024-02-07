@@ -3,12 +3,13 @@ import Badge from "./Badge.astro";
 
 const PROJECTS = [
     {
-        title: "Project 1",
-        description: "",
+        title: "Portfolio DEV",
+        description: "Developed with Astro and TailwindCSS. As a backend developer this was my first time using frontend technology. It was fun learning ASTRO and it has motivated me to keep trying new things. At first it was difficult to change my mindset from backend "
+        + "to this, but it was worth the work because now I know I can create a whole application.",
         link: "",
         github: "",
         image: "/projects/project1.webp",
-        tags: ["HTML", "CSS", "JavaScript"],
+        tags: ["HTML", "TailwindCSS", "ASTRO"],
     },
     
 ];
@@ -22,7 +23,7 @@ const PROJECTS = [
                 <img class="mb-5 mt-4 rounded shadow-xl shadow-yellow-100/5" src={image} alt=`${title} project's screenshot ` />
             <ul class="flex gap-x-4">
                 {tags.map((tag) => (
-                    <li><Badge>{tag}</Badge></li>
+                    <li><Badge class="font-semibold text-base">{tag}</Badge></li>
                 ))}
             </ul>
         </article>
