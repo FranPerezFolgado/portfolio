@@ -1,5 +1,7 @@
 ---
+import { manifest } from "astro:ssr-manifest";
 import Badge from "./Badge.astro";
+import GithubIcon from "../icons/Github.astro";
 
 const PROJECTS = [
     {
@@ -7,10 +9,19 @@ const PROJECTS = [
         description: "Developed with Astro and TailwindCSS. As a backend developer this was my first time using frontend technology. It was fun learning ASTRO and it has motivated me to keep trying new things. At first it was difficult to change my mindset from backend "
         + "to this, but it was worth the work because now I know I can create a whole application.",
         link: "",
-        github: "",
-        image: "/projects/project1.webp",
+        github: "https://github.com/FranPerezFolgado/portfolio",
+        image: "/portfolio/projects/project1.webp",
         tags: ["HTML", "TailwindCSS", "ASTRO"],
     },
+    {
+        title: "Randomlist",
+        description: "The Spotify Recommendations Playlist Generator is a Python library designed to enhance the Spotify listening experience by providing users with curated playlists that exclude their most frequently listened to genres. Leveraging the Spotipy library, this project offers seamless integration with the Spotify API, allowing users to access their account data securely.",
+        link: "",
+        github:"https://github.com/FranPerezFolgado/spotify-recomendations",
+        image: "/portfolio/projects/project2.webp",
+        tags: ["Python", "Flask", "Spotify"]
+        
+    }
     
 ];
 ---
@@ -18,9 +29,12 @@ const PROJECTS = [
 {
     PROJECTS.map(({ title, description, tags, github, image }) => (
         <article class="flex-col items-center pb-4 mb-10 gap-x-4 ">
-            <h3 class="text-2xl font-bold text-yellow-100/80 mb-5">{title}</h3>
-                <p class="text-pretty mb-3">{description}</p>
-                <img class="mb-5 mt-4 rounded shadow-xl shadow-yellow-100/5" src={image} alt=`${title} project's screenshot ` />
+            <div class="flex gap-3 mt-4 flex-wrap">
+                <h3 class="text-2xl font-bold text-yellow-100/80 mb-5">{title}</h3>
+                <a href= {github} target="_blank"><GithubIcon class="size-4 lg:size-6" /></a>
+            </div>
+            <p class="text-pretty mb-3">{description}</p>
+            <img class="mb-5 mt-4 rounded shadow-xl shadow-yellow-100/5" src={image} alt=`${title} project's screenshot ` />
             <ul class="flex gap-x-4">
                 {tags.map((tag) => (
                     <li><Badge class="font-semibold text-base">{tag}</Badge></li>
