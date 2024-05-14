@@ -1,4 +1,5 @@
 ---
+const IMAGEPATH = "/portfolio/"
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import Badge from "../components/Badge.astro";
@@ -23,7 +24,7 @@ import Code from "../icons/Code.astro";
 			<section class="flex gap-x-7">
 				<img
 					class="rounded-full w-16 h-16 mb-5"
-					src="/profilephoto.webp"
+					src=`${IMAGEPATH}profilephoto.webp`
 					alt="fran dev"
 				/>
 				<h1
