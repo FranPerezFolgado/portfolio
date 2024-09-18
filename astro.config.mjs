@@ -6,7 +6,9 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   site: 'https://franperezfolgado.netlify.app',
   build: {
-    format: 'directory'
+    format: 'directory',
+    assetsInlineLimit: -1,  // Set to -1 to inline all CSS
+
   },
   base: 'portfolio',
   integrations: [tailwind()]
