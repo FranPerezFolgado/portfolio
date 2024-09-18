@@ -10,6 +10,6 @@ export default defineConfig({
     assetsInlineLimit: -1,  // Set to -1 to inline all CSS
 
   },
-  base: 'portfolio',
+  base: '/',
   integrations: [tailwind()]
 });
